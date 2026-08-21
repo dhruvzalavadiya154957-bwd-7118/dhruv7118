@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+    <div id="login">
+        <h2>Login</h2>
+        <input type="text" placeholder="Username"><br><br>
+        <input type="password" placeholder="Password"><br><br>
+        <button onclick="alert('Logged In')">Submit</button>
+        <p>New user? <button onclick="toggle('reg')">Go to Register</button></p>
+    </div>
+
+    
+    <div id="register" style="display:none;">
+        <h2>Register</h2>
+        <input type="text" placeholder="Username"><br><br>
+        <input type="password" placeholder="Password"><br><br>
+        <button onclick="alert('Registered')">Submit</button>
+        <p>Existing user? <button onclick="toggle('log')">Go to Login</button></p>
+    </div>
+
+   
+    <script>
+        function toggle(page) {
+            if (page === 'reg') {
+                document.getElementById('login').style.display = 'none';
+                document.getElementById('register').style.display = 'block';
+            } else {
+                document.getElementById('login').style.display = 'block';
+                document.getElementById('register').style.display = 'none';
+            }
+        }
+    </script>
+
+</body>
+</html>
